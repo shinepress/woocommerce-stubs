@@ -1,0 +1,169 @@
+<?php
+
+
+/**
+ * Session handler class.
+ */
+class WC_Session_Handler extends \WC_Session
+{
+    /**
+     * Cookie name used for the session.
+     *
+     * @var string cookie name
+     */
+    protected $_cookie;
+    /**
+     * Stores session expiry.
+     *
+     * @var string session due to expire timestamp
+     */
+    protected $_session_expiring;
+    /**
+     * Stores session due to expire timestamp.
+     *
+     * @var string session expiration timestamp
+     */
+    protected $_session_expiration;
+    /**
+     * True when the cookie exists.
+     *
+     * @var bool Based on whether a cookie exists.
+     */
+    protected $_has_cookie = \false;
+    /**
+     * Table name for session data.
+     *
+     * @var string Custom session table name
+     */
+    protected $_table;
+    /**
+     * Constructor for the session class.
+     */
+    public function __construct()
+    {
+    }
+    /**
+     * Init hooks and session data.
+     *
+     * @since 3.3.0
+     */
+    public function init()
+    {
+    }
+    /**
+     * Sets the session cookie on-demand (usually after adding an item to the cart).
+     *
+     * Since the cookie name (as of 2.1) is prepended with wp, cache systems like batcache will not cache pages when set.
+     *
+     * Warning: Cookies will only be set if this is called before the headers are sent.
+     *
+     * @param bool $set Should the session cookie be set.
+     */
+    public function set_customer_session_cookie($set)
+    {
+    }
+    /**
+     * Return true if the current user has an active session, i.e. a cookie to retrieve values.
+     *
+     * @return bool
+     */
+    public function has_session()
+    {
+    }
+    /**
+     * Set session expiration.
+     */
+    public function set_session_expiration()
+    {
+    }
+    /**
+     * Generate a unique customer ID for guests, or return user ID if logged in.
+     *
+     * Uses Portable PHP password hashing framework to generate a unique cryptographically strong ID.
+     *
+     * @return string
+     */
+    public function generate_customer_id()
+    {
+    }
+    /**
+     * Get the session cookie, if set. Otherwise return false.
+     *
+     * Session cookies without a customer ID are invalid.
+     *
+     * @return bool|array
+     */
+    public function get_session_cookie()
+    {
+    }
+    /**
+     * Get session data.
+     *
+     * @return array
+     */
+    public function get_session_data()
+    {
+    }
+    /**
+     * Gets a cache prefix. This is used in session names so the entire cache can be invalidated with 1 function call.
+     *
+     * @return string
+     */
+    private function get_cache_prefix()
+    {
+    }
+    /**
+     * Save data.
+     */
+    public function save_data()
+    {
+    }
+    /**
+     * Destroy all session data.
+     */
+    public function destroy_session()
+    {
+    }
+    /**
+     * When a user is logged out, ensure they have a unique nonce by using the customer/session ID.
+     *
+     * @param int $uid User ID.
+     * @return string
+     */
+    public function nonce_user_logged_out($uid)
+    {
+    }
+    /**
+     * Cleanup session data from the database and clear caches.
+     */
+    public function cleanup_sessions()
+    {
+    }
+    /**
+     * Returns the session.
+     *
+     * @param string $customer_id Custo ID.
+     * @param mixed  $default Default session value.
+     * @return string|array
+     */
+    public function get_session($customer_id, $default = \false)
+    {
+    }
+    /**
+     * Delete the session from the cache and database.
+     *
+     * @param int $customer_id Customer ID.
+     */
+    public function delete_session($customer_id)
+    {
+    }
+    /**
+     * Update the session expiry timestamp.
+     *
+     * @param string $customer_id Customer ID.
+     * @param int    $timestamp Timestamp to expire the cookie.
+     */
+    public function update_session_timestamp($customer_id, $timestamp)
+    {
+    }
+}
