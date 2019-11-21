@@ -1,0 +1,179 @@
+<?php
+
+
+/**
+ * WC Variable Product Data Store: Stored in CPT.
+ *
+ * @version  3.0.0
+ */
+class WC_Product_Variable_Data_Store_CPT extends \WC_Product_Data_Store_CPT implements \WC_Object_Data_Store_Interface, \WC_Product_Variable_Data_Store_Interface
+{
+    /**
+     * Cached & hashed prices array for child variations.
+     *
+     * @var array
+     */
+    protected $prices_array = array();
+    /**
+     * Read attributes from post meta.
+     *
+     * @param WC_Product $product Product object.
+     */
+    protected function read_attributes(&$product)
+    {
+    }
+    /**
+     * Read product data.
+     *
+     * @since 3.0.0
+     *
+     * @param WC_Product $product Product object.
+     */
+    protected function read_product_data(&$product)
+    {
+    }
+    /**
+     * Loads variation child IDs.
+     *
+     * @param  WC_Product $product Product object.
+     * @param  bool       $force_read True to bypass the transient.
+     * @return array
+     */
+    public function read_children(&$product, $force_read = \false)
+    {
+    }
+    /**
+     * Loads an array of attributes used for variations, as well as their possible values.
+     *
+     * @param WC_Product $product Product object.
+     * @return array
+     */
+    public function read_variation_attributes(&$product)
+    {
+    }
+    /**
+     * Get an array of all sale and regular prices from all variations. This is used for example when displaying the price range at variable product level or seeing if the variable product is on sale.
+     *
+     * Can be filtered by plugins which modify costs, but otherwise will include the raw meta costs unlike get_price() which runs costs through the woocommerce_get_price filter.
+     * This is to ensure modified prices are not cached, unless intended.
+     *
+     * @since  3.0.0
+     * @param  WC_Product $product Product object.
+     * @param  bool       $for_display If true, prices will be adapted for display based on the `woocommerce_tax_display_shop` setting (including or excluding taxes).
+     * @return array of prices
+     */
+    public function read_price_data(&$product, $for_display = \false)
+    {
+    }
+    /**
+     * Create unique cache key based on the tax location (affects displayed/cached prices), product version and active price filters.
+     * DEVELOPERS should filter this hash if offering conditional pricing to keep it unique.
+     *
+     * @since  3.0.0
+     * @param  WC_Product $product Product object.
+     * @param  bool       $for_display If taxes should be calculated or not.
+     * @return string
+     */
+    protected function get_price_hash(&$product, $for_display = \false)
+    {
+    }
+    /**
+     * Does a child have a weight set?
+     *
+     * @since 3.0.0
+     * @param WC_Product $product Product object.
+     * @return boolean
+     */
+    public function child_has_weight($product)
+    {
+    }
+    /**
+     * Does a child have dimensions set?
+     *
+     * @since 3.0.0
+     * @param WC_Product $product Product object.
+     * @return boolean
+     */
+    public function child_has_dimensions($product)
+    {
+    }
+    /**
+     * Is a child in stock?
+     *
+     * @since 3.0.0
+     * @param WC_Product $product Product object.
+     * @return boolean
+     */
+    public function child_is_in_stock($product)
+    {
+    }
+    /**
+     * Does a child have a stock status?
+     *
+     * @since 3.3.0
+     * @param WC_Product $product Product object.
+     * @param string     $status 'instock', 'outofstock', or 'onbackorder'.
+     * @return boolean
+     */
+    public function child_has_stock_status($product, $status)
+    {
+    }
+    /**
+     * Syncs all variation names if the parent name is changed.
+     *
+     * @param WC_Product $product Product object.
+     * @param string     $previous_name Variation previous name.
+     * @param string     $new_name Variation new name.
+     * @since 3.0.0
+     */
+    public function sync_variation_names(&$product, $previous_name = '', $new_name = '')
+    {
+    }
+    /**
+     * Stock managed at the parent level - update children being managed by this product.
+     * This sync function syncs downwards (from parent to child) when the variable product is saved.
+     *
+     * @param WC_Product $product Product object.
+     * @since 3.0.0
+     */
+    public function sync_managed_variation_stock_status(&$product)
+    {
+    }
+    /**
+     * Sync variable product prices with children.
+     *
+     * @since 3.0.0
+     * @param WC_Product $product Product object.
+     */
+    public function sync_price(&$product)
+    {
+    }
+    /**
+     * Sync variable product stock status with children.
+     * Change does not persist unless saved by caller.
+     *
+     * @since 3.0.0
+     * @param WC_Product $product Product object.
+     */
+    public function sync_stock_status(&$product)
+    {
+    }
+    /**
+     * Delete variations of a product.
+     *
+     * @since 3.0.0
+     * @param int  $product_id Product ID.
+     * @param bool $force_delete False to trash.
+     */
+    public function delete_variations($product_id, $force_delete = \false)
+    {
+    }
+    /**
+     * Untrash variations.
+     *
+     * @param int $product_id Product ID.
+     */
+    public function untrash_variations($product_id)
+    {
+    }
+}
