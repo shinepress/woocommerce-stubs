@@ -1,0 +1,284 @@
+<?php
+
+
+/**
+ * REST API Orders controller class.
+ *
+ * @package Automattic/WooCommerce/RestApi
+ * @extends WC_REST_CRUD_Controller
+ */
+class WC_REST_Orders_V2_Controller extends \WC_REST_CRUD_Controller
+{
+    /**
+     * Endpoint namespace.
+     *
+     * @var string
+     */
+    protected $namespace = 'wc/v2';
+    /**
+     * Route base.
+     *
+     * @var string
+     */
+    protected $rest_base = 'orders';
+    /**
+     * Post type.
+     *
+     * @var string
+     */
+    protected $post_type = 'shop_order';
+    /**
+     * If object is hierarchical.
+     *
+     * @var bool
+     */
+    protected $hierarchical = \true;
+    /**
+     * Stores the request.
+     *
+     * @var array
+     */
+    protected $request = array();
+    /**
+     * Register the routes for orders.
+     */
+    public function register_routes()
+    {
+    }
+    /**
+     * Get object. Return false if object is not of required type.
+     *
+     * @since  3.0.0
+     * @param  int $id Object ID.
+     * @return WC_Data|bool
+     */
+    protected function get_object($id)
+    {
+    }
+    /**
+     * Expands an order item to get its data.
+     *
+     * @param WC_Order_item $item Order item data.
+     * @return array
+     */
+    protected function get_order_item_data($item)
+    {
+    }
+    /**
+     * Get formatted item data.
+     *
+     * @since  3.0.0
+     * @param  WC_Data $object WC_Data instance.
+     * @return array
+     */
+    protected function get_formatted_item_data($object)
+    {
+    }
+    /**
+     * Prepare a single order output for response.
+     *
+     * @since  3.0.0
+     * @param  WC_Data         $object  Object data.
+     * @param  WP_REST_Request $request Request object.
+     * @return WP_REST_Response
+     */
+    public function prepare_object_for_response($object, $request)
+    {
+    }
+    /**
+     * Prepare links for the request.
+     *
+     * @param WC_Data         $object  Object data.
+     * @param WP_REST_Request $request Request object.
+     * @return array                   Links for the given post.
+     */
+    protected function prepare_links($object, $request)
+    {
+    }
+    /**
+     * Prepare objects query.
+     *
+     * @since  3.0.0
+     * @param  WP_REST_Request $request Full details about the request.
+     * @return array
+     */
+    protected function prepare_objects_query($request)
+    {
+    }
+    /**
+     * Only return writable props from schema.
+     *
+     * @param  array $schema Schema.
+     * @return bool
+     */
+    protected function filter_writable_props($schema)
+    {
+    }
+    /**
+     * Prepare a single order for create or update.
+     *
+     * @param  WP_REST_Request $request Request object.
+     * @param  bool            $creating If is creating a new object.
+     * @return WP_Error|WC_Data
+     */
+    protected function prepare_object_for_database($request, $creating = \false)
+    {
+    }
+    /**
+     * Save an object data.
+     *
+     * @since  3.0.0
+     * @throws WC_REST_Exception But all errors are validated before returning any data.
+     * @param  WP_REST_Request $request  Full details about the request.
+     * @param  bool            $creating If is creating a new object.
+     * @return WC_Data|WP_Error
+     */
+    protected function save_object($request, $creating = \false)
+    {
+    }
+    /**
+     * Update address.
+     *
+     * @param WC_Order $order  Order data.
+     * @param array    $posted Posted data.
+     * @param string   $type   Address type.
+     */
+    protected function update_address($order, $posted, $type = 'billing')
+    {
+    }
+    /**
+     * Gets the product ID from the SKU or posted ID.
+     *
+     * @throws WC_REST_Exception When SKU or ID is not valid.
+     * @param array           $posted Request data.
+     * @param string          $action 'create' to add line item or 'update' to update it.
+     * @return int
+     */
+    protected function get_product_id($posted, $action = 'create')
+    {
+    }
+    /**
+     * Maybe set an item prop if the value was posted.
+     *
+     * @param WC_Order_Item $item   Order item.
+     * @param string        $prop   Order property.
+     * @param array         $posted Request data.
+     */
+    protected function maybe_set_item_prop($item, $prop, $posted)
+    {
+    }
+    /**
+     * Maybe set item props if the values were posted.
+     *
+     * @param WC_Order_Item $item   Order item data.
+     * @param string[]      $props  Properties.
+     * @param array         $posted Request data.
+     */
+    protected function maybe_set_item_props($item, $props, $posted)
+    {
+    }
+    /**
+     * Maybe set item meta if posted.
+     *
+     * @param WC_Order_Item $item   Order item data.
+     * @param array         $posted Request data.
+     */
+    protected function maybe_set_item_meta_data($item, $posted)
+    {
+    }
+    /**
+     * Create or update a line item.
+     *
+     * @param array  $posted Line item data.
+     * @param string $action 'create' to add line item or 'update' to update it.
+     * @param object $item Passed when updating an item. Null during creation.
+     * @return WC_Order_Item_Product
+     * @throws WC_REST_Exception Invalid data, server error.
+     */
+    protected function prepare_line_items($posted, $action = 'create', $item = \null)
+    {
+    }
+    /**
+     * Create or update an order shipping method.
+     *
+     * @param array  $posted $shipping Item data.
+     * @param string $action 'create' to add shipping or 'update' to update it.
+     * @param object $item Passed when updating an item. Null during creation.
+     * @return WC_Order_Item_Shipping
+     * @throws WC_REST_Exception Invalid data, server error.
+     */
+    protected function prepare_shipping_lines($posted, $action = 'create', $item = \null)
+    {
+    }
+    /**
+     * Create or update an order fee.
+     *
+     * @param array  $posted Item data.
+     * @param string $action 'create' to add fee or 'update' to update it.
+     * @param object $item Passed when updating an item. Null during creation.
+     * @return WC_Order_Item_Fee
+     * @throws WC_REST_Exception Invalid data, server error.
+     */
+    protected function prepare_fee_lines($posted, $action = 'create', $item = \null)
+    {
+    }
+    /**
+     * Create or update an order coupon.
+     *
+     * @param array  $posted Item data.
+     * @param string $action 'create' to add coupon or 'update' to update it.
+     * @param object $item Passed when updating an item. Null during creation.
+     * @return WC_Order_Item_Coupon
+     * @throws WC_REST_Exception Invalid data, server error.
+     */
+    protected function prepare_coupon_lines($posted, $action = 'create', $item = \null)
+    {
+    }
+    /**
+     * Wrapper method to create/update order items.
+     * When updating, the item ID provided is checked to ensure it is associated
+     * with the order.
+     *
+     * @param WC_Order $order order object.
+     * @param string   $item_type The item type.
+     * @param array    $posted item provided in the request body.
+     * @throws WC_REST_Exception If item ID is not associated with order.
+     */
+    protected function set_item($order, $item_type, $posted)
+    {
+    }
+    /**
+     * Helper method to check if the resource ID associated with the provided item is null.
+     * Items can be deleted by setting the resource ID to null.
+     *
+     * @param array $item Item provided in the request body.
+     * @return bool True if the item resource ID is null, false otherwise.
+     */
+    protected function item_is_null($item)
+    {
+    }
+    /**
+     * Get order statuses without prefixes.
+     *
+     * @return array
+     */
+    protected function get_order_statuses()
+    {
+    }
+    /**
+     * Get the Order's schema, conforming to JSON Schema.
+     *
+     * @return array
+     */
+    public function get_item_schema()
+    {
+    }
+    /**
+     * Get the query params for collections.
+     *
+     * @return array
+     */
+    public function get_collection_params()
+    {
+    }
+}
