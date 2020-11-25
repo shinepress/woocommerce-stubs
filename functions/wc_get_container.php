@@ -1,0 +1,12 @@
+<?php
+
+
+/**
+ * Returns the WooCommerce PSR11-compatible object container.
+ * Code in the `includes` directory should use the container to get instances of classes in the `src` directory.
+ *
+ * @return \Psr\Container\ContainerInterface The WooCommerce PSR11 container.
+ */
+function wc_get_container(): \Psr\Container\ContainerInterface
+{
+}
