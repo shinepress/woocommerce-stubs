@@ -1,0 +1,12 @@
+<?php
+
+
+/**
+ * Get (cached) attribute taxonomy ID and name pairs.
+ *
+ * @since 3.6.0
+ * @return array
+ */
+function wc_get_attribute_taxonomy_ids()
+{
+}
