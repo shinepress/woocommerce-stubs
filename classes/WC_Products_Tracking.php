@@ -1,0 +1,153 @@
+<?php
+
+
+/**
+ * This class adds actions to track usage of WooCommerce Products.
+ */
+class WC_Products_Tracking
+{
+    /**
+     * Tracks source.
+     */
+    const TRACKS_SOURCE = 'product-legacy-editor';
+    /**
+     * Init tracking.
+     */
+    public function init()
+    {
+    }
+    /**
+     * Send a Tracks event when the Products page is viewed.
+     */
+    public function track_products_view()
+    {
+    }
+    /**
+     * Send a Tracks event when the Products Categories and Tags page is viewed.
+     */
+    public function track_categories_and_tags_view()
+    {
+    }
+    /**
+     * Send a Tracks event when a product is updated.
+     *
+     * @param int    $product_id Product id.
+     * @param object $post       WordPress post.
+     */
+    public function track_product_updated($product_id, $post)
+    {
+    }
+    /**
+     * Track the Update button being clicked on the client side.
+     * This is needed because `track_product_updated` (using the `edit_post`
+     * hook) is called in response to a number of other triggers.
+     *
+     * @param WP_Post $post The post, not used.
+     */
+    public function track_product_updated_client_side($post)
+    {
+    }
+    /**
+     * Get the IDs of the possible product type options.
+     *
+     * @return array
+     */
+    private static function get_possible_product_type_options_ids()
+    {
+    }
+    /**
+     * Get the product type options for a product.
+     *
+     * @param int $post_id The ID of the product.
+     *
+     * @return array
+     */
+    private static function get_product_type_options($post_id)
+    {
+    }
+    /**
+     * Get a comma-separated string of the product type options that are enabled.
+     *
+     * @param array $product_type_options The product type options.
+     *
+     * @return string
+     */
+    private static function get_product_type_options_string($product_type_options)
+    {
+    }
+    /**
+     * Send a Tracks event when a product is published.
+     *
+     * @param int        $product_id  Product ID.
+     * @param WC_Product $product     Product object.
+     * @param array      $changes     Product changes.
+     */
+    public function track_product_published($product_id, $product, $changes = \null)
+    {
+    }
+    /**
+     * Send a Tracks event when a product category is created.
+     *
+     * @param int $category_id Category ID.
+     */
+    public function track_product_category_created($category_id)
+    {
+    }
+    /**
+     * Send a Tracks event when a product category is updated.
+     *
+     * @param int $category_id Category ID.
+     */
+    public function track_product_category_updated($category_id)
+    {
+    }
+    /**
+     * Adds the tracking scripts for product filtering actions.
+     *
+     * @param string $hook Hook of the current page.
+     * @return string|boolean
+     */
+    protected function get_product_screen($hook)
+    {
+    }
+    /**
+     * Adds the tracking scripts for product filtering actions.
+     *
+     * @param string $hook Page hook.
+     */
+    public function possibly_add_product_tracking_scripts($hook)
+    {
+    }
+    /**
+     * Adds the tracking scripts for product setting pages.
+     *
+     * @param string $hook Page hook.
+     */
+    public function possibly_add_product_import_scripts($hook)
+    {
+    }
+    /**
+     * Adds the tracking scripts for product attributes filtering actions.
+     *
+     * @param string $hook Page hook.
+     */
+    public function possibly_add_attribute_tracking_scripts($hook)
+    {
+    }
+    /**
+     * Adds the tracking scripts for tags and categories filtering actions.
+     *
+     * @param string $hook Page hook.
+     */
+    public function possibly_add_tag_tracking_scripts($hook)
+    {
+    }
+    /**
+     * Check if the current process is importing products.
+     *
+     * @return bool True if importing, false otherwise.
+     */
+    private function is_importing()
+    {
+    }
+}
