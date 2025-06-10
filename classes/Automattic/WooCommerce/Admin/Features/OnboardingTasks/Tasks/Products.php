@@ -1,0 +1,133 @@
+<?php
+
+namespace Automattic\WooCommerce\Admin\Features\OnboardingTasks\Tasks;
+
+/**
+ * Products Task
+ */
+class Products extends \Automattic\WooCommerce\Admin\Features\OnboardingTasks\Task
+{
+    const HAS_PRODUCT_TRANSIENT = 'woocommerce_product_task_has_product_transient';
+    /**
+     * Constructor
+     *
+     * @param TaskList $task_list Parent task list.
+     */
+    public function __construct($task_list)
+    {
+    }
+    /**
+     * ID.
+     *
+     * @return string
+     */
+    public function get_id()
+    {
+    }
+    /**
+     * Title.
+     *
+     * @return string
+     */
+    public function get_title()
+    {
+    }
+    /**
+     * Content.
+     *
+     * @return string
+     */
+    public function get_content()
+    {
+    }
+    /**
+     * Time.
+     *
+     * @return string
+     */
+    public function get_time()
+    {
+    }
+    /**
+     * Task completion.
+     *
+     * @return bool
+     */
+    public function is_complete()
+    {
+    }
+    /**
+     * Additional data.
+     *
+     * @return array
+     */
+    public function get_additional_data()
+    {
+    }
+    /**
+     * If a task is always accessible, relevant for when a task list is hidden but a task can still be viewed.
+     *
+     * @return bool
+     */
+    public function is_always_accessible()
+    {
+    }
+    /**
+     * Adds a return to task list notice when completing the import product task.
+     *
+     * @param string $hook Page hook.
+     */
+    public function possibly_add_import_return_notice_script($hook)
+    {
+    }
+    /**
+     * Adds a return to task list notice when completing the loading sample products action.
+     *
+     * @param string $hook Page hook.
+     */
+    public function possibly_add_load_sample_return_notice_script($hook)
+    {
+    }
+    /**
+     * Set the has products transient if the post qualifies as a user created product.
+     *
+     * @param int $post_id Post ID.
+     */
+    public function maybe_set_has_product_transient_on_untrashed_post($post_id)
+    {
+    }
+    /**
+     * Set the has products transient if the product qualifies as a user created product.
+     *
+     * @param int        $product_id Product ID.
+     * @param WC_Product $product Product object.
+     */
+    public function maybe_set_has_product_transient($product_id, $product)
+    {
+    }
+    /**
+     * Check if the product qualifies as a user created product.
+     *
+     * @param WC_Product $product Product object.
+     * @return bool
+     */
+    private function is_valid_product($product)
+    {
+    }
+    /**
+     * Check if the store has any user created published products.
+     *
+     * @return bool
+     */
+    public static function has_products()
+    {
+    }
+    /**
+     * Redirect to the add product tasklist if there are no products.
+     *
+     * @return void
+     */
+    public function maybe_redirect_to_add_product_tasklist()
+    {
+    }
+}
