@@ -1,4 +1,5 @@
 {
 	"name": "shinepress/woocommerce-stubs",
-	"type": "library"
+	"type": "library",
+	"license": "MIT"
 }
